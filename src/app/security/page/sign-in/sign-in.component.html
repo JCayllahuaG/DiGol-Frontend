@@ -1,0 +1,26 @@
+<div class="body">
+  <div class="login">
+    <form [formGroup]="loginForm"  (ngSubmit)="Login(loginForm.value)">
+      <img src="../../../../assets/img/logo-balon.svg" with="50%" alt="logo-DiGol" width="50%">
+      <h1>Login</h1>
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+
+      </mat-form-field>
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password">
+      </mat-form-field>
+      <div>
+        Don't have an account?
+        <a class="redirect" (click)="goToSignUp() ">Sign up</a>
+      </div>
+
+      <br>
+      <button [disabled]="!loginForm.valid" type="submit" mat-raised-button class="ancho button" color="primary" >Log In</button>
+    </form>
+
+  </div>
+
+</div>

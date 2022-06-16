@@ -1,0 +1,60 @@
+
+<div class="body">
+  <div class="login">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)" >
+      <img src="../../../../assets/img/logo-balon.svg" with="50%" alt="logo-DiGol" width="50%">
+      <h1>Sign Up</h1>
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" type="email" >
+        <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email" >
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Type User</mat-label>
+        <input placeholder="Pick type" [matAutocomplete]="auto" matInput formControlName="type" type="email" >
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+        <mat-icon matSuffix>person</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password">
+        <mat-icon matSuffix>vpn_key</mat-icon>
+        <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+          <div *ngIf="f['password'].errors && f['password'].errors['required']" >
+            Password is required
+          </div>
+        </div>
+      </mat-form-field>
+
+
+
+      <mat-form-field class="ancho" appearance="fill">
+        <mat-label>Repeat Password</mat-label>
+        <input  matInput type="password" formControlName="password2">
+        <mat-icon matSuffix>vpn_key</mat-icon>
+        <div *ngIf="f['password2'].touched && f['password2'].invalid" class="alert alert-danger">
+          <div *ngIf="f['password2'].errors && f['password2'].errors['required']" >
+            Password is required
+          </div>
+          <div *ngIf="f['password2'].errors && f['password2'].errors['confirmedValidator']" >
+            Password and Confirmed Password Must match
+          </div>
+        </div>
+      </mat-form-field>
+      <br>
+      <button [disabled]="!loginForm.valid" type="submit" mat-raised-button class="ancho button" color="primary" >Sign Up</button>
+    </form>
+
+  </div>
+
+</div>
