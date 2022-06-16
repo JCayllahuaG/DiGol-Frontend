@@ -1,0 +1,36 @@
+<div class="table-wrapper">
+  <table mat-table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> #Id</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+    <ng-container matColumnDef="customerId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> CustomerId</th>
+      <td mat-cell *matCellDef="let element">{{ element.customerId }}</td>
+    </ng-container>
+    <ng-container matColumnDef="sportFieldId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> SportFieldId</th>
+      <td mat-cell *matCellDef="let element">{{ element.sportFieldId }}</td>
+    </ng-container>
+    <ng-container matColumnDef="sportFieldType">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> SportFieldType</th>
+      <td mat-cell *matCellDef="let element">{{ element.sportFieldType }}</td>
+    </ng-container>
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Date</th>
+      <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+    </ng-container>
+    <ng-container matColumnDef="hour">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Hour</th>
+      <td mat-cell *matCellDef="let element">{{ element.hour }}</td>
+    </ng-container>
+    <ng-container matColumnDef="payment">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Payment</th>
+      <td mat-cell *matCellDef="let element" >{{ element.payment }}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns" > </tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns" >
+    </tr>
+  </table>
+  <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+</div>

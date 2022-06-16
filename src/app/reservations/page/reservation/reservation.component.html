@@ -1,0 +1,36 @@
+<h1 mat-dialog-title> Make Reservation</h1>
+<div mat-dialog-content style="width: 100%">
+  <form class="align-content-center justify-content-center" [formGroup]="reservationForm" >
+    <mat-form-field class="mat-form-field" appearance="outline">
+      <mat-label>Name</mat-label>
+      <input formControlName="name" matInput placeholder="Name">
+    </mat-form-field>
+    <mat-form-field class="mat-form-field" style="margin-left: 1rem;" appearance="outline">
+      <mat-label>Soccer Field Name</mat-label>
+      <input formControlName="soccerFieldName" matInput placeholder="Soccer Field">
+    </mat-form-field>
+    <mat-form-field class="mat-form-field" apperance="outline">
+      <mat-label>Soccer Field Type</mat-label>
+      <input formControlName="soccerFieldType"  placeholder="Pick type" [matAutocomplete]="auto" matInput >
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="margin-left: 2.5rem;">
+      <mat-label>Date</mat-label>
+      <input class="mat-form-field"  formControlName="date"  matInput placeholder="xx/xx/xxxx">
+    </mat-form-field>
+    <mat-form-field class="mat-form-field" appearance="outline">
+      <mat-label>Hour</mat-label>
+      <input formControlName="hour" matInput placeholder="xx:xx pm/am">
+    </mat-form-field>
+    <mat-form-field  style="margin-left: 1rem;" class="mat-form-field" appearance="outline">
+      <mat-label>Payment</mat-label>
+      <input formControlName="payment" matInput placeholder="$xxx.xx">
+    </mat-form-field>
+    <button mat-raised-button color="warn" style="height: 40px; margin: 4px;">Cancel</button>
+    <button mat-raised-button  (click)="AddReservation(reservationForm.value)" color="primary" style="height: 40px;margin: 4px;">Confirm</button>
+  </form>
+</div>
