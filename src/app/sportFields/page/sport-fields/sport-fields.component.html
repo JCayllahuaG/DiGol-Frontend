@@ -1,0 +1,30 @@
+<div style=" width: 100%; padding: 0; margin: 0;">
+  <mat-grid-list [cols]="colSize" rowHeight="750px" >
+    <div *ngFor="let sportField of sportsFields" >
+      <mat-grid-tile rowspan="1" colspan="1" style="position: center" >
+        <mat-card class="example-card" >
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{sportField.name}}</mat-card-title>
+            <mat-card-subtitle>${{sportField.price}}.00</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="https://grassverdeperu.com/wp-content/uploads/2021/04/Caracteristicas-del-Grass-Sintetico-Deportivo-768x768.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <h4 style="margin: 0 0 5px;padding: 0;">{{sportField.address}}</h4>
+            <p style="margin: 0; padding: 0;">
+              {{sportField.description}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button (click)="openDialog()" >BOOK</button>
+            <button mat-button (click)="openProfile()">MORE</button>
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+    </div>
+
+
+  </mat-grid-list>
+
+
+</div>
