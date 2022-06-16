@@ -1,0 +1,183 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Customer 1",
+      "wallet": 1000,
+      "userId": 2
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "owner1",
+      "userId": 1
+    }
+  ],
+  "sportFields": [
+    {
+      "id": 1,
+      "name": "Grass Los Santos",
+      "avatar-img": "https://material.angular.io/assets/img/examples/shiba1.jpg",
+      "img": "https://grassverdeperu.com/wp-content/uploads/2021/04/Caracteristicas-del-Grass-Sintetico-Deportivo-768x768.jpg",
+      "address": "Av. Los Santos N° 300",
+      "description": "Synthetic grass field located in the district of Chorrillos, we have 4 sports fields, for soccer 5 and 7. In addition to having sports implements such as gloves, vests, ball and inflator.",
+      "price": 30,
+      "ownerId": 1,
+      "types": [
+        5,
+        7
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Grass Paris",
+      "avatar-img": "https://material.angular.io/assets/img/examples/shiba1.jpg",
+      "img": "https://i0.wp.com/www.jersgrass.com/wp-content/uploads/2017/10/IMG-20171001-WA0004.jpg",
+      "address": "Av. La Esperanza N° 520",
+      "description": "Synthetic grass field located in the district of Chorrillos, we have 4 sports fields, for soccer 5 and 7. In addition to having sports implements such as gloves, vests, ball and inflator.",
+      "price": 40,
+      "ownerId": 1
+    },
+    {
+      "id": 3,
+      "name": "Grass Leo Messi",
+      "avatar-img": "https://material.angular.io/assets/img/examples/shiba1.jpg",
+      "img": "https://scontent.fjau2-1.fna.fbcdn.net/v/t1.6435-9/41598683_1843212549127953_2088039217564221440_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeGkwR7r8m5H-b-AvOaNIx6gmtIZZTFku_6a0hllMWS7_kSzVoZCa2myksa5WVX4PUH54C9wEWdTaDBZP4f1eefS&_nc_ohc=MvNtghe5V7MAX_afZbs&_nc_ht=scontent.fjau2-1.fna&oh=00_AT9gYTNKAA9gpkbAtSx4yYEOO8L59XAL6Y6FcNlgyX6Bgg&oe=62AE1505",
+      "address": "Jr. La 13 de Noviembre N° 204",
+      "description": "Synthetic grass field located in the district of Chorrillos, we have 4 sports fields, for soccer 5 and 7. In addition to having sports implements such as gloves, vests, ball and inflator.",
+      "price": 35,
+      "ownerId": 1
+    },
+    {
+      "id": 4,
+      "name": "Grass La Pinchanguita",
+      "avatar-img": "https://material.angular.io/assets/img/examples/shiba1.jpg",
+      "img": "https://scontent.fjau2-1.fna.fbcdn.net/v/t1.6435-9/41598683_1843212549127953_2088039217564221440_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeGkwR7r8m5H-b-AvOaNIx6gmtIZZTFku_6a0hllMWS7_kSzVoZCa2myksa5WVX4PUH54C9wEWdTaDBZP4f1eefS&_nc_ohc=MvNtghe5V7MAX_afZbs&_nc_ht=scontent.fjau2-1.fna&oh=00_AT9gYTNKAA9gpkbAtSx4yYEOO8L59XAL6Y6FcNlgyX6Bgg&oe=62AE1505",
+      "address": "Jr. La 13 de Noviembre N° 204",
+      "description": "Synthetic grass field located in the district of Chorrillos, we have 4 sports fields, for soccer 5 and 7. In addition to having sports implements such as gloves, vests, ball and inflator.",
+      "price": 40,
+      "ownerId": 1
+    },
+    {
+      "id": 5,
+      "name": "Grass El Balon de Oro",
+      "avatar-img": "https://material.angular.io/assets/img/examples/shiba1.jpg",
+      "img": "https://dahucagrass.com/wp-content/uploads/2021/08/Gras-sitentico3-1.jpg",
+      "address": "Jr. Puno N° 600",
+      "description": "Synthetic grass field located in the district of Chorrillos, we have 4 sports fields, for soccer 5 and 7. In addition to having sports implements such as gloves, vests, ball and inflator.",
+      "price": 80,
+      "ownerId": 1
+    },
+    {
+      "id": 6,
+      "name": "Grass El Pelotero",
+      "avatar-img": "https://material.angular.io/assets/img/examples/shiba1.jpg",
+      "img": "https://cdn.www.gob.pe/uploads/document/file/2567182/standard_.jpg",
+      "address": "Av. Real N° 124",
+      "description": "Synthetic grass field located in the district of Chorrillos, we have 4 sports fields, for soccer 5 and 7. In addition to having sports implements such as gloves, vests, ball and inflator.",
+      "price": 60,
+      "ownerId": 1
+    }
+  ],
+  "reservations": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "sportFieldId": 1,
+      "sportFieldType": 5,
+      "date": "12/02/2022",
+      "hour": "15:05",
+      "payment": "$40"
+    },
+    {
+      "id": 2,
+      "customerId": 2,
+      "sportFieldId": 2,
+      "sportFieldType": 5,
+      "date": "12/02/2022",
+      "hour": "15:05",
+      "payment": "$40"
+    },
+    {
+      "id": 3,
+      "customerId": 3,
+      "sportFieldId": 3,
+      "sportFieldType": 5,
+      "date": "12/02/2022",
+      "hour": "15:05",
+      "payment": "$40"
+    },
+    {
+      "id": 4,
+      "customerId": 4,
+      "sportFieldId": 4,
+      "sportFieldType": 5,
+      "date": "12/02/2022",
+      "hour": "15:05",
+      "payment": "$40"
+    },
+    {
+      "id": 5,
+      "customerId": 1,
+      "sportFieldId": 1,
+      "sportFieldType": 5,
+      "date": "12/02/2022",
+      "hour": "15:05",
+      "payment": "$40"
+    },
+    {
+      "id": 6,
+      "customerId": 2,
+      "sportFieldId": 2,
+      "sportFieldType": 5,
+      "date": "12/02/2022",
+      "hour": "15:05",
+      "payment": "$40"
+    },
+    {
+      "id": 7,
+      "customerId": 3,
+      "sportFieldId": 3,
+      "sportFieldType": 5,
+      "date": "12/02/2022",
+      "hour": "15:05",
+      "payment": "$40"
+    },
+    {
+      "id": 8,
+      "customerId": 4,
+      "sportFieldId": 4,
+      "sportFieldType": 5,
+      "date": "12/02/2022",
+      "hour": "15:05",
+      "payment": "$40"
+    },
+    {
+      "name": "",
+      "soccerFieldName": "",
+      "soccerFieldType": "",
+      "date": "",
+      "hour": "",
+      "payment": "",
+      "id": 9
+    }
+  ],
+  "users": [
+    {
+      "name": "joseNuevouser",
+      "email": "u202019558@upc.edu.pe",
+      "type": "Customer",
+      "password": "123123",
+      "password2": "123123",
+      "id": 1
+    }
+  ],
+  "usersLogged": [
+    {
+      "email": "u202019558@upc.edu.pe",
+      "password": "123123",
+      "id": 1
+    }
+  ]
+}

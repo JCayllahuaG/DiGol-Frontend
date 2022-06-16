@@ -1,0 +1,4 @@
+{
+  "/reservations/:reservationId": "/reservations/:reservationId",
+  "/customers/:customerId/reservations/:reservationId": "/reservations/:reservationId"
+}
