@@ -1,0 +1,35 @@
+
+.toolbar-section{
+  background-color: #212429;
+}
+.title-toolbar{
+ color: #e5e3e3!important;
+  font-size: 30px;
+  padding-left: 1rem;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.toolbar-item{
+  color: #e5e3e3!important;
+  font-size: 18px;
+}
+.menu-item:hover{
+  background-color: #39a139;;
+  color:#fff;
+}
+
+.menu:not(:empty){
+  padding: 0;
+  background-color: #42b642;
+}
+.menu-item{
+  background-color: #42b642;;
+  color:#fff;
+}
+toolbar-item:hover{
+  background-color: #0d48b6;
+}
+toolbar-item{
+  background-color: #42b642;
+}
