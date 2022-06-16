@@ -1,0 +1,53 @@
+<div class="body">
+  <section class="hero row container">
+    <div>
+      <h1>Let's start to book a soccer field!</h1>
+      <p>Hurry up join our community now!</p>
+      <a mat-button  (click)="ToLogin()" class="hero-btn">Join now</a>
+    </div>
+    <div class="row">
+      <img src="assets/img/logo-balon.svg" alt="Hero-Image">
+    </div>
+  </section>
+
+  <section class="reservations">
+      <h2>Recent Reservations</h2>
+      <div class="mat-table" style="color: white;">
+        <table mat-table [dataSource]="dataSource" matSort style="color: white; width: 100%; background-color: #b6b6b6;">
+          <ng-container matColumnDef="id" style="color: white;">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header style="color: black;"> #Id</th>
+            <td mat-cell style="color: black;" *matCellDef="let element">{{ element.id }}</td>
+          </ng-container>
+          <ng-container style="color: black;" matColumnDef="customerId">
+            <th style="color: black;" mat-header-cell *matHeaderCellDef mat-sort-header> CustomerId</th>
+            <td  style="color: black;" mat-cell *matCellDef="let element">{{ element.customerId }}</td>
+          </ng-container>
+          <ng-container style="color: black;" matColumnDef="sportFieldId">
+            <th style="color: black;"  mat-header-cell *matHeaderCellDef mat-sort-header> SportFieldId</th>
+            <td style="color: black;" mat-cell *matCellDef="let element">{{ element.sportFieldId }}</td>
+          </ng-container>
+          <ng-container style="color: black;" matColumnDef="sportFieldType">
+            <th style="color: black;" mat-header-cell *matHeaderCellDef mat-sort-header> SportFieldType</th>
+            <td style="color: black;" mat-cell *matCellDef="let element">{{ element.sportFieldType }}</td>
+          </ng-container>
+          <ng-container style="color: black;" matColumnDef="date">
+            <th style="color: black;" mat-header-cell *matHeaderCellDef mat-sort-header> Date</th>
+            <td style="color: black;" mat-cell *matCellDef="let element">{{ element.date }}</td>
+          </ng-container>
+          <ng-container style="color: black;" matColumnDef="hour">
+            <th style="color: black;" mat-header-cell *matHeaderCellDef mat-sort-header> Hour</th>
+            <td style="color: black;" mat-cell *matCellDef="let element">{{ element.hour }}</td>
+          </ng-container>
+          <ng-container matColumnDef="payment" style="padding-left: 5rem;">
+            <th style="color: black;padding-left: 5rem; padding-right: 0;" mat-header-cell *matHeaderCellDef mat-sort-header> Payment</th>
+            <td style="color: black;padding-left: 5rem;padding-right: 0;" mat-cell *matCellDef="let element" >{{ element.payment }}</td>
+          </ng-container>
+          <tr style="color: black;" mat-header-row *matHeaderRowDef="displayedColumns" > </tr>
+          <tr style="color: black;" mat-row *matRowDef="let row; columns: displayedColumns" >
+          </tr>
+        </table>
+
+      </div>
+
+  </section>
+</div>
